@@ -1,0 +1,110 @@
+# PlayerTags Configuration
+# Color codes: Use & for formatting (&a, &b, &c, &l, &n, etc.)
+
+settings:
+  # Cooldown in seconds between tag changes (0 to disable)
+  cooldown-seconds: 60
+  
+  # GUI Settings
+  gui-title: "&8&lSelect Your Tag"
+  gui-size: 54
+  
+  # Default tag ID (leave empty for none)
+  default-tag: ""
+  
+  # Sounds (list: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html)
+  sounds:
+    select: ENTITY_PLAYER_LEVELUP
+    error: ENTITY_VILLAGER_NO
+  
+  # PlaceholderAPI support
+  use-placeholderapi: true
+
+# GUI Navigation Items
+gui-items:
+  next-page:
+    material: ARROW
+    name: "&a&lNext Page →"
+  prev-page:
+    material: ARROW
+    name: "&a&l← Previous Page"
+  close:
+    material: BARRIER
+    name: "&c&lClose"
+  remove-tag:
+    material: REDSTONE
+    name: "&c&lRemove Tag"
+
+# Tag Definitions
+tags:
+  vip:
+    display-name: "&a&lVIP"
+    prefix: "&a[VIP] &f"
+    suffix: ""
+    permission: "playertags.tag.vip"
+    icon: DIAMOND
+    slot: 10
+    glowing: true
+    description:
+      - "&7Exclusive VIP tag"
+      - "&7Shows your supporter status"
+  
+  mvp:
+    display-name: "&b&lMVP"
+    prefix: "&b[MVP] &f"
+    suffix: " &b✪"
+    permission: "playertags.tag.mvp"
+    icon: NETHER_STAR
+    slot: 13
+    glowing: true
+    description:
+      - "&7Premium MVP tag"
+      - "&7For our most valued players"
+  
+  admin:
+    display-name: "&c&lADMIN"
+    prefix: "&c[ADMIN] &f"
+    suffix: " &c⚡"
+    permission: "playertags.tag.admin"
+    icon: REDSTONE_BLOCK
+    slot: 16
+    glowing: true
+    description:
+      - "&7Staff tag"
+      - "&7Server administrators only"
+  
+  builder:
+    display-name: "&e&lBUILDER"
+    prefix: "&e[BUILDER] &f"
+    suffix: ""
+    permission: "playertags.tag.builder"
+    icon: BRICKS
+    slot: 19
+    glowing: false
+    description:
+      - "&7Builder team tag"
+      - "&7For creative contributors"
+  
+  veteran:
+    display-name: "&6&lVETERAN"
+    prefix: "&6[VETERAN] &f"
+    suffix: ""
+    permission: "playertags.tag.veteran"
+    icon: GOLDEN_APPLE
+    slot: 22
+    glowing: false
+    description:
+      - "&7Long-time player tag"
+      - "&7Thanks for your loyalty!"
+  
+  supporter:
+    display-name: "&d&lSUPPORTER"
+    prefix: "&d[❤] &f"
+    suffix: " &d❤"
+    permission: "playertags.tag.supporter"
+    icon: HEART_OF_THE_SEA
+    slot: 25
+    glowing: true
+    description:
+      - "&7Server supporter tag"
+      - "&7Thanks for your support!"

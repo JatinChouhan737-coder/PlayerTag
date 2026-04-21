@@ -1,0 +1,40 @@
+name: PlayerTags
+version: 1.0.0
+main: com.example.playertags.PlayerTags
+api-version: 1.13
+author: YourName
+description: Advanced player tags system with GUI
+softdepend: [PlaceholderAPI]
+
+commands:
+  tags:
+    description: Open tag selection menu
+    usage: /<command> [reload|help]
+    aliases: [tag, playertags]
+
+permissions:
+  playertags.use:
+    description: Allows using basic tag features
+    default: true
+  playertags.admin:
+    description: Allows admin commands
+    default: op
+  playertags.bypass.cooldown:
+    description: Bypass tag change cooldown
+    default: op
+  playertags.tag.*:
+    description: Access to all tags
+    default: op
+    children:
+      playertags.tag.vip: true
+      playertags.tag.mvp: true
+      playertags.tag.admin: true
+  playertags.tag.vip:
+    description: Access to VIP tag
+    default: false
+  playertags.tag.mvp:
+    description: Access to MVP tag
+    default: false
+  playertags.tag.admin:
+    description: Access to Admin tag
+    default: op
